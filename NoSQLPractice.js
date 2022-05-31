@@ -94,3 +94,16 @@ const updatePost = (myBlogId, myTitle, myText, myAuthor, myCategory) => {
 
 // console.log(findPost(51)[0]); This works -accidentally added blogUpdated to object while figuring it out
 // updatePost(51, "New New Title", "This is hard.", "Jesse A", "New Cat.");
+
+
+const deletePosts = (inputBlogIds) =>{
+    for(let ids of inputBlogIds){
+
+    
+    db.fiftyblogs.deleteOne({id: ids});
+
+}
+}
+// deletePosts([49, 50, 51]);
+
+// db.fiftyblogs.find({}) -> deletePosts works!
